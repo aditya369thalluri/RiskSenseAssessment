@@ -1,0 +1,16 @@
+
+
+Assumptions:
+1. Only one row for each manufacturer in the output.
+2. When there are multiple models from a same manufacturer with highest price, then we select one model from that manufacturer.
+
+Algorithm:
+1. Firstly, write a query to find out the highest price for each manufacturer as pairs (manufacturer, price).
+2. Using the above result as Sub-query, Find the triplets for each manufacturer as (manufacturer, model, price) with the highest price.
+3. Use Distinct on manufacturer, so that we get only one entry per manufacturer in case of multiple models with highest price.
+
+
+Complexity:
+1. Assuming there are n rows in the table, the time complexity of query will be O(n).
+
+
